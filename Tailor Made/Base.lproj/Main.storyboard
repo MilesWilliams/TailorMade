@@ -6,10 +6,15 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Raleway-ExtraLight.ttf">
+            <string>Raleway-ExtraLight</string>
+        </array>
         <array key="Raleway-Regular.ttf">
             <string>Raleway-Regular</string>
         </array>
@@ -36,8 +41,26 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F9k-v3-dZ0" customClass="GradientView" customModule="Tailor_Made" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="95" width="375" height="572"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="ZiH-VN-7eD">
+                                        <rect key="frame" x="170" y="132" width="35.5" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35.5" id="YW3-KG-cUk"/>
+                                            <constraint firstAttribute="height" constant="28" id="cuv-zy-RND"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FOR HIM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8K4-4b-lf3">
+                                        <rect key="frame" x="152" y="238" width="71" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="572" id="EOx-AM-M9h"/>
+                                    <constraint firstItem="ZiH-VN-7eD" firstAttribute="top" secondItem="F9k-v3-dZ0" secondAttribute="top" constant="132" id="FmX-72-rCo"/>
+                                    <constraint firstItem="ZiH-VN-7eD" firstAttribute="centerX" secondItem="F9k-v3-dZ0" secondAttribute="centerX" id="UV4-M0-FoL"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
@@ -48,12 +71,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="iwc-Fr-O1z">
-                                <rect key="frame" x="43" y="232" width="289" height="140"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="289" id="lpr-aq-Xlm"/>
-                                </constraints>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Welcome..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lMd-U9-GRV">
                                 <rect key="frame" x="139" y="520" width="97" height="24"/>
                                 <constraints>
@@ -63,18 +80,6 @@
                                 <fontDescription key="fontDescription" name="Raleway-Thin" family="Raleway" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PuA-Og-m0l">
-                                <rect key="frame" x="193" y="516" width="111" height="31"/>
-                                <color key="backgroundColor" red="0.69803921570000005" green="0.59607843140000005" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="111" id="cw2-fe-fiv"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="111" id="f6I-9v-J5S"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="16"/>
-                                <state key="normal" title="LOGIN">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
                             <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kO6-bb-Nmi">
                                 <rect key="frame" x="72" y="516" width="111" height="31"/>
                                 <constraints>
@@ -84,25 +89,51 @@
                                 <state key="normal" title="SIGN UP">
                                     <color key="titleColor" red="0.69803921570000005" green="0.59607843140000005" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k4R-XP-dkE"/>
+                                </connections>
                             </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PuA-Og-m0l">
+                                <rect key="frame" x="193" y="516" width="111" height="31"/>
+                                <color key="backgroundColor" red="0.69803921570000005" green="0.59607843140000005" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="111" id="cw2-fe-fiv"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="111" id="f6I-9v-J5S"/>
+                                    <constraint firstAttribute="height" constant="31" id="kWN-qf-aMp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="16"/>
+                                <state key="normal" title="LOGIN">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JTI-eC-GUG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tailor Made" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUb-7m-CAG">
+                                <rect key="frame" x="41" y="261" width="294" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="294" id="gk4-Gb-2cU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Raleway-Thin" family="Raleway" pointSize="56"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="lMd-U9-GRV" firstAttribute="top" secondItem="F9k-v3-dZ0" secondAttribute="bottom" constant="-147" id="5vE-2S-xch"/>
+                            <constraint firstItem="PuA-Og-m0l" firstAttribute="top" secondItem="XUb-7m-CAG" secondAttribute="bottom" constant="189" id="6Bp-1f-rPW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PuA-Og-m0l" secondAttribute="trailing" constant="55" id="7BL-bV-bVC"/>
-                            <constraint firstItem="PuA-Og-m0l" firstAttribute="top" secondItem="iwc-Fr-O1z" secondAttribute="bottom" constant="144" id="9qv-bo-Izu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lMd-U9-GRV" secondAttribute="trailing" constant="123" id="CoY-NU-OIC"/>
                             <constraint firstItem="kO6-bb-Nmi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="56" id="DAf-Kp-79R"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iwc-Fr-O1z" secondAttribute="bottom" constant="295" id="Hbk-yS-UxI"/>
-                            <constraint firstItem="iwc-Fr-O1z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="Kwg-jt-8Kz"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lMd-U9-GRV" secondAttribute="bottom" constant="123" id="LX3-So-0iz"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kO6-bb-Nmi" secondAttribute="bottom" constant="120" id="NZM-GN-Qrr"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PuA-Og-m0l" secondAttribute="bottom" constant="120" id="PtZ-xb-evx"/>
                             <constraint firstItem="lMd-U9-GRV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="123" id="QR3-Bm-gmp"/>
+                            <constraint firstItem="XUb-7m-CAG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="241" id="RRc-bi-GNv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lMd-U9-GRV" secondAttribute="trailing" constant="123" id="SKi-DU-f3b"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="iwc-Fr-O1z" secondAttribute="trailing" constant="27" id="W4x-f0-gM4"/>
-                            <constraint firstItem="iwc-Fr-O1z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="212" id="bcg-8d-sEN"/>
-                            <constraint firstItem="kO6-bb-Nmi" firstAttribute="top" secondItem="iwc-Fr-O1z" secondAttribute="bottom" constant="144" id="e8w-ts-i6K"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XUb-7m-CAG" secondAttribute="trailing" constant="24" id="TcP-Lz-nJ1"/>
+                            <constraint firstItem="XUb-7m-CAG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="25" id="aus-ZN-zQW"/>
                             <constraint firstItem="PuA-Og-m0l" firstAttribute="leading" secondItem="kO6-bb-Nmi" secondAttribute="trailing" constant="10" id="gBB-ZD-oD5"/>
                             <constraint firstItem="F9k-v3-dZ0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="hag-aU-sii"/>
                             <constraint firstItem="lMd-U9-GRV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="123" id="qiU-PJ-MdP"/>
@@ -120,15 +151,536 @@
                         <outlet property="loginBTN" destination="PuA-Og-m0l" id="6O1-jq-fF6"/>
                         <outlet property="signupBTN" destination="kO6-bb-Nmi" id="KpG-Hu-2TJ"/>
                         <outlet property="welcomeTextLabel" destination="lMd-U9-GRV" id="jJV-9W-2zc"/>
+                        <segue destination="foC-em-Lqf" kind="custom" identifier="signupSegue" customClass="ScaleSegue" customModule="Tailor_Made" customModuleProvider="target" id="lG8-RO-PdE"/>
+                        <segue destination="lpb-8a-wiV" kind="presentation" identifier="loginSegue" id="FBA-dw-KcD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
+        <!--SignUP View Controller-->
+        <scene sceneID="vKH-H1-dP6">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B38-kf-ey1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="foC-em-Lqf" customClass="SignUPViewController" customModule="Tailor_Made" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cMt-gx-ba1"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uo4-l4-ERt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sut-j5-6Jj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qLq-O8-nnd" customClass="GradientView" customModule="Tailor_Made" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="signupBackground2" translatesAutoresizingMaskIntoConstraints="NO" id="5wm-em-Ikv">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIGN UP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ejr-nR-FOA">
+                                        <rect key="frame" x="30" y="46" width="119" height="35"/>
+                                        <fontDescription key="fontDescription" name="Raleway-Thin" family="Raleway" pointSize="30"/>
+                                        <color key="textColor" red="0.69803921570000005" green="0.59607843140000005" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYi-5I-hmw">
+                                        <rect key="frame" x="30" y="555" width="111" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="111" id="5O9-Bi-Y5v"/>
+                                            <constraint firstAttribute="height" constant="30" id="dbQ-dH-vZ3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Raleway-Thin" family="Raleway" pointSize="16"/>
+                                        <color key="tintColor" red="0.69803921570000005" green="0.59607843140000005" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="SUBMIT">
+                                            <color key="titleColor" red="0.69803921570000005" green="0.59607843140000005" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zzV-37-ZIW">
+                                        <rect key="frame" x="0.0" y="168" width="375" height="499"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="textField" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="hLY-oo-jN8">
+                                                <rect key="frame" x="30" y="22" width="284" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.69803921570000005" green="0.59607843140000005" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <accessibility key="accessibilityConfiguration" label="User name">
+                                                    <accessibilityTraits key="traits" none="YES"/>
+                                                </accessibility>
+                                                <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGn-SR-jr6">
+                                                <rect key="frame" x="30" y="0.0" width="102" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Raleway-ExtraLight" family="Raleway" pointSize="16"/>
+                                                <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="GjX-4r-c15">
+                                                <rect key="frame" x="30" y="104" width="284" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <accessibility key="accessibilityConfiguration" label="User name">
+                                                    <accessibilityTraits key="traits" none="YES"/>
+                                                </accessibility>
+                                                <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" keyboardAppearance="alert"/>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="QE5-Nj-T0v">
+                                                <rect key="frame" x="30" y="186" width="284" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <accessibility key="accessibilityConfiguration" label="User name">
+                                                    <accessibilityTraits key="traits" none="YES"/>
+                                                </accessibility>
+                                                <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5IT-IL-fNi">
+                                                <rect key="frame" x="30" y="164" width="102" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Raleway-ExtraLight" family="Raleway" pointSize="16"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubg-g6-YFe">
+                                                <rect key="frame" x="30" y="82" width="102" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Raleway-ExtraLight" family="Raleway" pointSize="16"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Repeat password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpB-Lb-IFO">
+                                                <rect key="frame" x="30" y="246" width="157" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Raleway-ExtraLight" family="Raleway" pointSize="16"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="User name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="I9f-kz-pLV">
+                                                <rect key="frame" x="30" y="267" width="284" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.69803921570000005" green="0.59607843140000005" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <accessibility key="accessibilityConfiguration" label="User name">
+                                                    <accessibilityTraits key="traits" none="YES"/>
+                                                </accessibility>
+                                                <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" keyboardAppearance="light" secureTextEntry="YES"/>
+                                            </textField>
+                                        </subviews>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.090512628424657529" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ejr-nR-FOA" firstAttribute="top" secondItem="qLq-O8-nnd" secondAttribute="top" constant="46" id="9Af-b2-kMd"/>
+                                    <constraint firstItem="Ejr-nR-FOA" firstAttribute="leading" secondItem="qLq-O8-nnd" secondAttribute="leading" constant="30" id="TbD-X1-16d"/>
+                                    <constraint firstItem="mYi-5I-hmw" firstAttribute="leading" secondItem="qLq-O8-nnd" secondAttribute="leading" constant="30" id="V2r-dC-ooc"/>
+                                    <constraint firstItem="mYi-5I-hmw" firstAttribute="top" secondItem="Ejr-nR-FOA" secondAttribute="bottom" constant="474" id="jts-hO-gvV"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
+                                        <color key="value" red="0.094117647060000004" green="0.098039215690000001" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qLq-O8-nnd" firstAttribute="leading" secondItem="sut-j5-6Jj" secondAttribute="leading" id="B2K-1H-2op"/>
+                            <constraint firstItem="qLq-O8-nnd" firstAttribute="top" secondItem="sut-j5-6Jj" secondAttribute="top" id="L9C-g8-6N7"/>
+                            <constraint firstItem="Uo4-l4-ERt" firstAttribute="top" secondItem="qLq-O8-nnd" secondAttribute="bottom" id="iur-SK-eBW"/>
+                            <constraint firstAttribute="trailing" secondItem="qLq-O8-nnd" secondAttribute="trailing" id="rCR-70-3TR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="GjX-4r-c15" id="hSr-0p-qg7"/>
+                        <outlet property="passwordTextField" destination="QE5-Nj-T0v" id="gq5-O6-NAL"/>
+                        <outlet property="reptPasswordTextField" destination="I9f-kz-pLV" id="BqK-Jq-dgk"/>
+                        <outlet property="submitBTN" destination="mYi-5I-hmw" id="FbZ-gG-1rl"/>
+                        <outlet property="titleLabel" destination="Ejr-nR-FOA" id="GUR-Hh-hC6"/>
+                        <outlet property="userNameTextField" destination="hLY-oo-jN8" id="f60-DB-dX8"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1016.8" y="138.98050974512745"/>
+        </scene>
+        <!--Log In View Controller-->
+        <scene sceneID="3bE-Iv-phA">
+            <objects>
+                <viewController id="rCQ-47-LKj" customClass="LogInViewController" customModule="Tailor_Made" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GOX-9c-9iI"/>
+                        <viewControllerLayoutGuide type="bottom" id="EDE-Gf-NVM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xq2-Ik-o8X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="signupBackground2" translatesAutoresizingMaskIntoConstraints="NO" id="GrW-lH-Ypm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="xeH-j7-6qz">
+                                <rect key="frame" x="30" y="255" width="284" height="30"/>
+                                <accessibility key="accessibilityConfiguration" label="User name">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="284" id="ETx-u2-3Xl"/>
+                                    <constraint firstAttribute="height" constant="30" id="Sb0-I0-adv"/>
+                                </constraints>
+                                <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8v-aE-REf">
+                                <rect key="frame" x="30" y="235" width="70" height="19"/>
+                                <fontDescription key="fontDescription" name="Raleway-ExtraLight" family="Raleway" pointSize="16"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="textField" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Cf6-PK-R3C">
+                                <rect key="frame" x="30" y="175" width="284" height="30"/>
+                                <color key="tintColor" red="0.69803921570000005" green="0.59607843140000005" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="User name">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="284" id="ieu-zW-weO"/>
+                                    <constraint firstAttribute="height" constant="30" id="vBt-B4-tlc"/>
+                                </constraints>
+                                <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xH8-tE-RaR">
+                                <rect key="frame" x="30" y="154.5" width="79.5" height="19"/>
+                                <fontDescription key="fontDescription" name="Raleway-ExtraLight" family="Raleway" pointSize="16"/>
+                                <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOG IN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EgU-I4-geo">
+                                <rect key="frame" x="30" y="56" width="98" height="35.5"/>
+                                <fontDescription key="fontDescription" name="Raleway-Thin" family="Raleway" pointSize="30"/>
+                                <color key="textColor" red="0.69803921570000005" green="0.59607843140000005" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2g-uU-hs4">
+                                <rect key="frame" x="46" y="342" width="111" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="111" id="M6M-IL-4if"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Raleway-Thin" family="Raleway" pointSize="16"/>
+                                <color key="tintColor" red="0.69803921570000005" green="0.59607843140000005" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="SUBMIT">
+                                    <color key="titleColor" red="0.69803921570000005" green="0.59607843140000005" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EgU-I4-geo" firstAttribute="leading" secondItem="Xq2-Ik-o8X" secondAttribute="leadingMargin" constant="14" id="0aH-x6-d5a"/>
+                            <constraint firstItem="xH8-tE-RaR" firstAttribute="top" secondItem="EgU-I4-geo" secondAttribute="bottom" constant="63" id="4js-vu-yVo"/>
+                            <constraint firstItem="i8v-aE-REf" firstAttribute="leading" secondItem="Xq2-Ik-o8X" secondAttribute="leading" constant="30" id="6Uk-rx-lVv"/>
+                            <constraint firstItem="xeH-j7-6qz" firstAttribute="leading" secondItem="Xq2-Ik-o8X" secondAttribute="leading" constant="30" id="9bj-a2-uM3"/>
+                            <constraint firstItem="G2g-uU-hs4" firstAttribute="top" secondItem="GrW-lH-Ypm" secondAttribute="bottom" constant="-325" id="D4f-82-ZAv"/>
+                            <constraint firstItem="G2g-uU-hs4" firstAttribute="leading" secondItem="Xq2-Ik-o8X" secondAttribute="leadingMargin" constant="30" id="Ds4-6T-GTg"/>
+                            <constraint firstItem="Cf6-PK-R3C" firstAttribute="top" secondItem="xH8-tE-RaR" secondAttribute="bottom" constant="1.5" id="HdJ-2K-Ool"/>
+                            <constraint firstItem="Cf6-PK-R3C" firstAttribute="leading" secondItem="Xq2-Ik-o8X" secondAttribute="leading" constant="30" id="I48-Ce-x3s"/>
+                            <constraint firstItem="xeH-j7-6qz" firstAttribute="top" secondItem="i8v-aE-REf" secondAttribute="bottom" constant="1" id="OgM-yM-IQu"/>
+                            <constraint firstItem="i8v-aE-REf" firstAttribute="top" secondItem="Cf6-PK-R3C" secondAttribute="bottom" constant="30" id="kwk-NA-UId"/>
+                            <constraint firstItem="EgU-I4-geo" firstAttribute="top" secondItem="GOX-9c-9iI" secondAttribute="bottom" constant="36" id="rbf-L7-bNG"/>
+                            <constraint firstItem="xH8-tE-RaR" firstAttribute="leading" secondItem="Xq2-Ik-o8X" secondAttribute="leading" constant="30" id="y2l-31-Whe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="xeH-j7-6qz" id="tQe-9v-BN4"/>
+                        <outlet property="submitBTN" destination="G2g-uU-hs4" id="tjU-2q-jTq"/>
+                        <outlet property="usernameTextField" destination="Cf6-PK-R3C" id="PkZ-qr-t1r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dXt-BV-4MZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1016.8" y="905.3973013493254"/>
+        </scene>
+        <!--Credentials View Controller-->
+        <scene sceneID="0zl-lh-viR">
+            <objects>
+                <viewController id="lpb-8a-wiV" customClass="credentialsViewController" customModule="Tailor_Made" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c10-hg-GkR"/>
+                        <viewControllerLayoutGuide type="bottom" id="fdC-62-pY8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OWW-hv-JS2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Loading Screen Background" translatesAutoresizingMaskIntoConstraints="NO" id="cCl-RT-BeJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BiH-Bi-gor" customClass="GradientView" customModule="Tailor_Made" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FOR HIM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gwc-IC-jCK">
+                                        <rect key="frame" x="152" y="167" width="71" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="36y-vJ-Tyi"/>
+                                            <constraint firstAttribute="width" constant="71" id="fHI-we-esa"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z7c-KL-hzw">
+                                        <rect key="frame" x="0.0" y="291" width="375" height="376"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmT-jV-BeZ">
+                                                <rect key="frame" x="40" y="243" width="111" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="111" id="1kj-Fy-FWk"/>
+                                                    <constraint firstAttribute="height" constant="30" id="y4N-Eb-dzs"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Raleway-Thin" family="Raleway" pointSize="16"/>
+                                                <color key="tintColor" red="0.69803921570000005" green="0.59607843140000005" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="SUBMIT">
+                                                    <color key="titleColor" red="0.69803921570000005" green="0.59607843140000005" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="ezc-Z5-8oP">
+                                                <rect key="frame" x="50" y="125" width="284" height="30"/>
+                                                <accessibility key="accessibilityConfiguration" label="User name">
+                                                    <accessibilityTraits key="traits" none="YES"/>
+                                                </accessibility>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="Dda-vN-i7h"/>
+                                                    <constraint firstAttribute="width" constant="284" id="gHv-sd-Otw"/>
+                                                </constraints>
+                                                <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3A-Kh-2SK">
+                                                <rect key="frame" x="50" y="106" width="70" height="19"/>
+                                                <fontDescription key="fontDescription" name="Raleway-ExtraLight" family="Raleway" pointSize="16"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="UvR-QH-BIp">
+                                                <rect key="frame" x="50" y="41" width="284" height="30"/>
+                                                <color key="tintColor" red="0.69803921570000005" green="0.59607843140000005" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <accessibility key="accessibilityConfiguration" label="User name">
+                                                    <accessibilityTraits key="traits" none="YES"/>
+                                                </accessibility>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="284" id="HnX-Rh-A6O"/>
+                                                    <constraint firstAttribute="height" constant="30" id="bL6-WG-efA"/>
+                                                </constraints>
+                                                <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TeR-KB-gu6">
+                                                <rect key="frame" x="50" y="22" width="80" height="19"/>
+                                                <fontDescription key="fontDescription" name="Raleway-ExtraLight" family="Raleway" pointSize="16"/>
+                                                <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="xmT-jV-BeZ" firstAttribute="leading" secondItem="Z7c-KL-hzw" secondAttribute="leading" constant="40" id="KKi-Tj-9Or"/>
+                                            <constraint firstItem="ezc-Z5-8oP" firstAttribute="leading" secondItem="Z7c-KL-hzw" secondAttribute="leading" constant="50" id="cDt-t4-sYW"/>
+                                            <constraint firstItem="TeR-KB-gu6" firstAttribute="leading" secondItem="Z7c-KL-hzw" secondAttribute="leading" constant="50" id="dln-Or-ToA"/>
+                                            <constraint firstItem="UvR-QH-BIp" firstAttribute="leading" secondItem="Z7c-KL-hzw" secondAttribute="leading" constant="50" id="efp-hw-tg1"/>
+                                            <constraint firstItem="xmT-jV-BeZ" firstAttribute="top" secondItem="ezc-Z5-8oP" secondAttribute="bottom" constant="88" id="ktr-jF-lnH"/>
+                                            <constraint firstItem="w3A-Kh-2SK" firstAttribute="leading" secondItem="Z7c-KL-hzw" secondAttribute="leading" constant="50" id="neb-0o-cYB"/>
+                                            <constraint firstItem="w3A-Kh-2SK" firstAttribute="top" secondItem="UvR-QH-BIp" secondAttribute="bottom" constant="35" id="oSp-1A-wRT"/>
+                                            <constraint firstItem="TeR-KB-gu6" firstAttribute="top" secondItem="Z7c-KL-hzw" secondAttribute="top" constant="22" id="qX0-Sb-CzH"/>
+                                            <constraint firstItem="ezc-Z5-8oP" firstAttribute="top" secondItem="w3A-Kh-2SK" secondAttribute="bottom" id="w0A-l5-oRu"/>
+                                            <constraint firstItem="UvR-QH-BIp" firstAttribute="top" secondItem="TeR-KB-gu6" secondAttribute="bottom" id="yuf-NM-m6x"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" restorationIdentifier="SignInForm" translatesAutoresizingMaskIntoConstraints="NO" id="zIf-xM-InU">
+                                        <rect key="frame" x="0.0" y="291" width="375" height="376"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2W-5U-hBC">
+                                                <rect key="frame" x="40" y="243" width="111" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="GLN-kM-N4P"/>
+                                                    <constraint firstAttribute="width" constant="111" id="X6p-UJ-zYT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Raleway-Thin" family="Raleway" pointSize="16"/>
+                                                <color key="tintColor" red="0.69803921570000005" green="0.59607843140000005" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="SUBMIT">
+                                                    <color key="titleColor" red="0.69803921570000005" green="0.59607843140000005" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="FoK-jT-Mlk">
+                                                <rect key="frame" x="50" y="125" width="284" height="30"/>
+                                                <accessibility key="accessibilityConfiguration" label="User name">
+                                                    <accessibilityTraits key="traits" none="YES"/>
+                                                </accessibility>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="1U5-3n-cxg"/>
+                                                    <constraint firstAttribute="width" constant="284" id="rWG-QT-hgS"/>
+                                                </constraints>
+                                                <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmQ-fW-MbS">
+                                                <rect key="frame" x="50" y="106" width="70" height="19"/>
+                                                <fontDescription key="fontDescription" name="Raleway-ExtraLight" family="Raleway" pointSize="16"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="textField" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="O0c-Wi-WNc">
+                                                <rect key="frame" x="50" y="41" width="284" height="30"/>
+                                                <color key="tintColor" red="0.69803921570000005" green="0.59607843140000005" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <accessibility key="accessibilityConfiguration" label="User name">
+                                                    <accessibilityTraits key="traits" none="YES"/>
+                                                </accessibility>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="284" id="JXu-pG-Tvi"/>
+                                                    <constraint firstAttribute="height" constant="30" id="Q0T-il-3nE"/>
+                                                </constraints>
+                                                <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AyL-nI-2pG">
+                                                <rect key="frame" x="50" y="22" width="80" height="19"/>
+                                                <fontDescription key="fontDescription" name="Raleway-ExtraLight" family="Raleway" pointSize="16"/>
+                                                <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="O0c-Wi-WNc" firstAttribute="leading" secondItem="WmQ-fW-MbS" secondAttribute="leading" id="3gy-JJ-TRp"/>
+                                            <constraint firstItem="O0c-Wi-WNc" firstAttribute="top" secondItem="AyL-nI-2pG" secondAttribute="bottom" id="6lx-s6-R0r"/>
+                                            <constraint firstItem="FoK-jT-Mlk" firstAttribute="top" secondItem="WmQ-fW-MbS" secondAttribute="bottom" id="ITA-Yu-Hjk"/>
+                                            <constraint firstAttribute="height" constant="376" id="JKb-xb-nyS"/>
+                                            <constraint firstItem="WmQ-fW-MbS" firstAttribute="top" secondItem="O0c-Wi-WNc" secondAttribute="bottom" constant="35" id="ckR-rx-n7E"/>
+                                            <constraint firstItem="r2W-5U-hBC" firstAttribute="top" secondItem="FoK-jT-Mlk" secondAttribute="bottom" constant="88" id="eXM-8M-xau"/>
+                                            <constraint firstItem="WmQ-fW-MbS" firstAttribute="leading" secondItem="FoK-jT-Mlk" secondAttribute="leading" id="gVj-RI-e66"/>
+                                            <constraint firstItem="AyL-nI-2pG" firstAttribute="top" secondItem="zIf-xM-InU" secondAttribute="top" constant="22" id="gWt-wj-8YG"/>
+                                            <constraint firstItem="r2W-5U-hBC" firstAttribute="leading" secondItem="zIf-xM-InU" secondAttribute="leading" constant="40" id="hLt-8f-66s"/>
+                                            <constraint firstItem="AyL-nI-2pG" firstAttribute="leading" secondItem="O0c-Wi-WNc" secondAttribute="leading" id="oG9-cV-09h"/>
+                                            <constraint firstItem="AyL-nI-2pG" firstAttribute="leading" secondItem="zIf-xM-InU" secondAttribute="leading" constant="50" id="vUx-Sc-xMe"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akj-yC-als">
+                                        <rect key="frame" x="146" y="253" width="91" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="91" id="Y8J-W2-Mdn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Raleway-Thin" family="Raleway" pointSize="20"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="LOGIN">
+                                            <color key="titleColor" red="0.58431372550000005" green="0.59607843140000005" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginFormBTN:" destination="lpb-8a-wiV" eventType="touchUpInside" id="d49-YH-grx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fqq-iY-dC8">
+                                        <rect key="frame" x="40" y="253" width="91" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="HqN-SC-0hD"/>
+                                            <constraint firstAttribute="width" constant="91" id="qUQ-fT-V3m"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Raleway-Thin" family="Raleway" pointSize="20"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="SIGN UP">
+                                            <color key="titleColor" red="0.58431372550000005" green="0.59607843140000005" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signUpFormBTN:" destination="lpb-8a-wiV" eventType="touchUpInside" id="UjD-br-c8j"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Z7c-KL-hzw" firstAttribute="leading" secondItem="BiH-Bi-gor" secondAttribute="leading" id="2PN-y3-daO"/>
+                                    <constraint firstItem="Fqq-iY-dC8" firstAttribute="top" secondItem="akj-yC-als" secondAttribute="top" id="ALx-0Z-zd6"/>
+                                    <constraint firstItem="akj-yC-als" firstAttribute="baseline" secondItem="Fqq-iY-dC8" secondAttribute="firstBaseline" id="LT9-i1-Gx7"/>
+                                    <constraint firstItem="zIf-xM-InU" firstAttribute="leading" secondItem="Z7c-KL-hzw" secondAttribute="leading" id="NW8-Sf-NC2"/>
+                                    <constraint firstItem="Gwc-IC-jCK" firstAttribute="top" secondItem="BiH-Bi-gor" secondAttribute="top" constant="167" id="PHs-9i-fc0"/>
+                                    <constraint firstItem="zIf-xM-InU" firstAttribute="centerX" secondItem="Z7c-KL-hzw" secondAttribute="centerX" id="Toe-mi-ibW"/>
+                                    <constraint firstItem="Fqq-iY-dC8" firstAttribute="leading" secondItem="BiH-Bi-gor" secondAttribute="leading" constant="40" id="aEp-wR-dS4"/>
+                                    <constraint firstItem="akj-yC-als" firstAttribute="leading" secondItem="Fqq-iY-dC8" secondAttribute="trailing" constant="15" id="aGn-dM-2li"/>
+                                    <constraint firstItem="Gwc-IC-jCK" firstAttribute="centerX" secondItem="Z7c-KL-hzw" secondAttribute="centerX" id="fJR-5c-KCH"/>
+                                    <constraint firstItem="akj-yC-als" firstAttribute="top" secondItem="Gwc-IC-jCK" secondAttribute="bottom" constant="65" id="gyj-L3-hoz"/>
+                                    <constraint firstAttribute="bottom" secondItem="Z7c-KL-hzw" secondAttribute="bottom" id="lnQ-il-5Qe"/>
+                                    <constraint firstAttribute="trailing" secondItem="Z7c-KL-hzw" secondAttribute="trailing" id="noM-Zc-tfI"/>
+                                    <constraint firstItem="Z7c-KL-hzw" firstAttribute="top" secondItem="akj-yC-als" secondAttribute="bottom" constant="8" id="t4H-8L-xpw"/>
+                                    <constraint firstItem="zIf-xM-InU" firstAttribute="centerY" secondItem="Z7c-KL-hzw" secondAttribute="centerY" id="tB7-CQ-pw9"/>
+                                    <constraint firstItem="Fqq-iY-dC8" firstAttribute="baseline" secondItem="akj-yC-als" secondAttribute="firstBaseline" id="vhw-7d-p3E"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
+                                        <color key="value" red="0.094117647060000004" green="0.098039215690000001" blue="0.1137254902" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tailor Made" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYj-74-zPr">
+                                <rect key="frame" x="40" y="95" width="294" height="66"/>
+                                <fontDescription key="fontDescription" name="Raleway-Thin" family="Raleway" pointSize="56"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="fEl-tp-Hu4">
+                                <rect key="frame" x="169" y="61" width="36" height="28"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cCl-RT-BeJ" firstAttribute="centerX" secondItem="aYj-74-zPr" secondAttribute="centerX" id="75P-2K-PpN"/>
+                            <constraint firstItem="fEl-tp-Hu4" firstAttribute="top" secondItem="c10-hg-GkR" secondAttribute="bottom" constant="41" id="Ab4-ie-xql"/>
+                            <constraint firstItem="cCl-RT-BeJ" firstAttribute="leading" secondItem="OWW-hv-JS2" secondAttribute="leading" id="ED8-5u-SFU"/>
+                            <constraint firstItem="BiH-Bi-gor" firstAttribute="leading" secondItem="cCl-RT-BeJ" secondAttribute="leading" id="IBz-GG-mEJ"/>
+                            <constraint firstItem="cCl-RT-BeJ" firstAttribute="bottom" secondItem="fdC-62-pY8" secondAttribute="top" id="J3E-d1-npO"/>
+                            <constraint firstItem="BiH-Bi-gor" firstAttribute="trailing" secondItem="cCl-RT-BeJ" secondAttribute="trailing" id="Q8M-l5-NRw"/>
+                            <constraint firstItem="BiH-Bi-gor" firstAttribute="bottom" secondItem="fdC-62-pY8" secondAttribute="top" id="ZaI-F8-NV7"/>
+                            <constraint firstItem="aYj-74-zPr" firstAttribute="top" secondItem="fEl-tp-Hu4" secondAttribute="bottom" constant="6" id="lKL-w2-Vu1"/>
+                            <constraint firstItem="fEl-tp-Hu4" firstAttribute="centerX" secondItem="aYj-74-zPr" secondAttribute="centerX" id="qex-pF-K5s"/>
+                            <constraint firstItem="aYj-74-zPr" firstAttribute="leading" secondItem="OWW-hv-JS2" secondAttribute="leadingMargin" constant="24" id="v7I-zV-dox"/>
+                            <constraint firstItem="cCl-RT-BeJ" firstAttribute="top" secondItem="BiH-Bi-gor" secondAttribute="top" id="x9e-g8-NPR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginFormBTN" destination="akj-yC-als" id="WDE-HO-Bay"/>
+                        <outlet property="loginFormView" destination="Z7c-KL-hzw" id="G6K-z5-Wrn"/>
+                        <outlet property="loginPasswordTextField" destination="ezc-Z5-8oP" id="4hS-ax-H2c"/>
+                        <outlet property="loginUsernameTextField" destination="UvR-QH-BIp" id="moN-SI-H8f"/>
+                        <outlet property="signUpForm" destination="zIf-xM-InU" id="p6v-eP-59H"/>
+                        <outlet property="signUpFormBTN" destination="Fqq-iY-dC8" id="5WP-ZR-nO3"/>
+                        <outlet property="submitBTN" destination="xmT-jV-BeZ" id="agu-hP-eFk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WV7-xk-1cz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1871.2" y="916.1919040479761"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Loading Screen Background" width="375" height="667"/>
-        <image name="icon" width="290" height="128"/>
+        <image name="icon" width="36" height="28"/>
+        <image name="signupBackground2" width="375" height="667"/>
     </resources>
 </document>

@@ -12,7 +12,6 @@ class ViewController: UIViewController {
     @IBOutlet var background: UIImageView!
     @IBOutlet var welcomeTextLabel: UITextField!
     @IBOutlet var loginBTN: UIButton!
-
     @IBOutlet var signupBTN: UIButton!
     
     override func viewDidLoad() {
@@ -45,6 +44,7 @@ class ViewController: UIViewController {
             (finished: Bool) -> Void in
             self.enterButton()
         })
+
         
     }
 
@@ -58,6 +58,12 @@ class ViewController: UIViewController {
         self.loginBTN.fadeIn()
         self.signupBTN.fadeIn()
 
+    }
+    @IBAction func signUp(_ sender: UIButton) {
+        performSegue(withIdentifier: "signupSegue", sender: self)
+    }
+    @IBAction func login(_ sender: UIButton) {
+        performSegue(withIdentifier: "loginSegue", sender: self)
     }
     
 }

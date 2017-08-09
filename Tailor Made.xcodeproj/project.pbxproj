@@ -27,6 +27,7 @@
 		02B9479D1F3B611F0043B95C /* Raleway-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02B9478A1F3B611F0043B95C /* Raleway-Thin.ttf */; };
 		02B9479E1F3B611F0043B95C /* Raleway-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02B9478B1F3B611F0043B95C /* Raleway-ThinItalic.ttf */; };
 		02B9479F1F3B611F0043B95C /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 02B9478C1F3B611F0043B95C /* SIL Open Font License.txt */; };
+		02B947A11F3B80700043B95C /* ScaleSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B947A01F3B80700043B95C /* ScaleSegue.swift */; };
 		02DF0B611F3B324500E6AF14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DF0B601F3B324500E6AF14 /* AppDelegate.swift */; };
 		02DF0B631F3B324500E6AF14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DF0B621F3B324500E6AF14 /* ViewController.swift */; };
 		02DF0B661F3B324500E6AF14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02DF0B641F3B324500E6AF14 /* Main.storyboard */; };
@@ -34,6 +35,9 @@
 		02DF0B6B1F3B324500E6AF14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02DF0B6A1F3B324500E6AF14 /* Assets.xcassets */; };
 		02DF0B6E1F3B324500E6AF14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02DF0B6C1F3B324500E6AF14 /* LaunchScreen.storyboard */; };
 		02DF0B761F3B3C4900E6AF14 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DF0B751F3B3C4900E6AF14 /* GradientView.swift */; };
+		02E607751F3B8CF1004191A7 /* SignUPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E607741F3B8CF1004191A7 /* SignUPViewController.swift */; };
+		02E607771F3BA99C004191A7 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E607761F3BA99C004191A7 /* LogInViewController.swift */; };
+		02E607791F3BBDA9004191A7 /* credentialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E607781F3BBDA9004191A7 /* credentialsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +61,7 @@
 		02B9478A1F3B611F0043B95C /* Raleway-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Thin.ttf"; sourceTree = "<group>"; };
 		02B9478B1F3B611F0043B95C /* Raleway-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-ThinItalic.ttf"; sourceTree = "<group>"; };
 		02B9478C1F3B611F0043B95C /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
+		02B947A01F3B80700043B95C /* ScaleSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleSegue.swift; sourceTree = "<group>"; };
 		02DF0B5D1F3B324500E6AF14 /* Tailor Made.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tailor Made.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02DF0B601F3B324500E6AF14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02DF0B621F3B324500E6AF14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +71,9 @@
 		02DF0B6D1F3B324500E6AF14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02DF0B6F1F3B324500E6AF14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02DF0B751F3B3C4900E6AF14 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		02E607741F3B8CF1004191A7 /* SignUPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUPViewController.swift; sourceTree = "<group>"; };
+		02E607761F3BA99C004191A7 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		02E607781F3BBDA9004191A7 /* credentialsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = credentialsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				02B947761F3B4DEA0043B95C /* UIViewExtensions.swift */,
+				02B947A01F3B80700043B95C /* ScaleSegue.swift */,
 			);
 			name = Animations;
 			sourceTree = "<group>";
@@ -136,7 +145,10 @@
 				02B947781F3B4E370043B95C /* Animations */,
 				02DF0B601F3B324500E6AF14 /* AppDelegate.swift */,
 				02DF0B621F3B324500E6AF14 /* ViewController.swift */,
+				02E607761F3BA99C004191A7 /* LogInViewController.swift */,
 				02DF0B641F3B324500E6AF14 /* Main.storyboard */,
+				02E607781F3BBDA9004191A7 /* credentialsViewController.swift */,
+				02E607741F3B8CF1004191A7 /* SignUPViewController.swift */,
 				02DF0B751F3B3C4900E6AF14 /* GradientView.swift */,
 				02DF0B6A1F3B324500E6AF14 /* Assets.xcassets */,
 				02DF0B6C1F3B324500E6AF14 /* LaunchScreen.storyboard */,
@@ -239,8 +251,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				02DF0B631F3B324500E6AF14 /* ViewController.swift in Sources */,
+				02E607791F3BBDA9004191A7 /* credentialsViewController.swift in Sources */,
 				02B947771F3B4DEB0043B95C /* UIViewExtensions.swift in Sources */,
+				02B947A11F3B80700043B95C /* ScaleSegue.swift in Sources */,
 				02DF0B691F3B324500E6AF14 /* Tailor_Made.xcdatamodeld in Sources */,
+				02E607771F3BA99C004191A7 /* LogInViewController.swift in Sources */,
+				02E607751F3B8CF1004191A7 /* SignUPViewController.swift in Sources */,
 				02DF0B761F3B3C4900E6AF14 /* GradientView.swift in Sources */,
 				02DF0B611F3B324500E6AF14 /* AppDelegate.swift in Sources */,
 			);
