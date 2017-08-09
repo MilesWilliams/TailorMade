@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02B947771F3B4DEB0043B95C /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B947761F3B4DEA0043B95C /* UIViewExtensions.swift */; };
 		02DF0B611F3B324500E6AF14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DF0B601F3B324500E6AF14 /* AppDelegate.swift */; };
 		02DF0B631F3B324500E6AF14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DF0B621F3B324500E6AF14 /* ViewController.swift */; };
 		02DF0B661F3B324500E6AF14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02DF0B641F3B324500E6AF14 /* Main.storyboard */; };
 		02DF0B691F3B324500E6AF14 /* Tailor_Made.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 02DF0B671F3B324500E6AF14 /* Tailor_Made.xcdatamodeld */; };
 		02DF0B6B1F3B324500E6AF14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02DF0B6A1F3B324500E6AF14 /* Assets.xcassets */; };
 		02DF0B6E1F3B324500E6AF14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02DF0B6C1F3B324500E6AF14 /* LaunchScreen.storyboard */; };
+		02DF0B761F3B3C4900E6AF14 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DF0B751F3B3C4900E6AF14 /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02B947761F3B4DEA0043B95C /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		02DF0B5D1F3B324500E6AF14 /* Tailor Made.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tailor Made.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02DF0B601F3B324500E6AF14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02DF0B621F3B324500E6AF14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		02DF0B6A1F3B324500E6AF14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02DF0B6D1F3B324500E6AF14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02DF0B6F1F3B324500E6AF14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02DF0B751F3B3C4900E6AF14 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02B947781F3B4E370043B95C /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				02B947761F3B4DEA0043B95C /* UIViewExtensions.swift */,
+			);
+			name = Animations;
+			sourceTree = "<group>";
+		};
 		02DF0B541F3B324500E6AF14 = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +68,11 @@
 		02DF0B5F1F3B324500E6AF14 /* Tailor Made */ = {
 			isa = PBXGroup;
 			children = (
+				02B947781F3B4E370043B95C /* Animations */,
 				02DF0B601F3B324500E6AF14 /* AppDelegate.swift */,
 				02DF0B621F3B324500E6AF14 /* ViewController.swift */,
 				02DF0B641F3B324500E6AF14 /* Main.storyboard */,
+				02DF0B751F3B3C4900E6AF14 /* GradientView.swift */,
 				02DF0B6A1F3B324500E6AF14 /* Assets.xcassets */,
 				02DF0B6C1F3B324500E6AF14 /* LaunchScreen.storyboard */,
 				02DF0B6F1F3B324500E6AF14 /* Info.plist */,
@@ -141,7 +155,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				02DF0B631F3B324500E6AF14 /* ViewController.swift in Sources */,
+				02B947771F3B4DEB0043B95C /* UIViewExtensions.swift in Sources */,
 				02DF0B691F3B324500E6AF14 /* Tailor_Made.xcdatamodeld in Sources */,
+				02DF0B761F3B3C4900E6AF14 /* GradientView.swift in Sources */,
 				02DF0B611F3B324500E6AF14 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +324,7 @@
 				02DF0B741F3B324500E6AF14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

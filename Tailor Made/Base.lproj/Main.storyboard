@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tailor_Made" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,74 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Loading Screen Background" translatesAutoresizingMaskIntoConstraints="NO" id="3hO-5r-8Wb">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F9k-v3-dZ0" customClass="GradientView" customModule="Tailor_Made" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="95" width="375" height="572"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="572" id="EOx-AM-M9h"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
+                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="FirstColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="iwc-Fr-O1z">
+                                <rect key="frame" x="43" y="232" width="289" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="289" id="lpr-aq-Xlm"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Welcome..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lMd-U9-GRV">
+                                <rect key="frame" x="139" y="520" width="97" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="NDx-NS-Ay7"/>
+                                </constraints>
+                                <color key="textColor" red="0.69803921568627447" green="0.59607843137254901" blue="0.36470588235294116" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lMd-U9-GRV" firstAttribute="top" secondItem="F9k-v3-dZ0" secondAttribute="bottom" constant="-147" id="5vE-2S-xch"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lMd-U9-GRV" secondAttribute="trailing" constant="123" id="CoY-NU-OIC"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iwc-Fr-O1z" secondAttribute="bottom" constant="295" id="Hbk-yS-UxI"/>
+                            <constraint firstItem="iwc-Fr-O1z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="Kwg-jt-8Kz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lMd-U9-GRV" secondAttribute="bottom" constant="123" id="LX3-So-0iz"/>
+                            <constraint firstItem="lMd-U9-GRV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="123" id="QR3-Bm-gmp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lMd-U9-GRV" secondAttribute="trailing" constant="123" id="SKi-DU-f3b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iwc-Fr-O1z" secondAttribute="trailing" constant="27" id="W4x-f0-gM4"/>
+                            <constraint firstItem="iwc-Fr-O1z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="212" id="bcg-8d-sEN"/>
+                            <constraint firstItem="F9k-v3-dZ0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="hag-aU-sii"/>
+                            <constraint firstItem="lMd-U9-GRV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="123" id="qiU-PJ-MdP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="F9k-v3-dZ0" secondAttribute="trailing" constant="-16" id="uxT-Lg-UhL"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="SecondColor">
+                                <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="background" destination="3hO-5r-8Wb" id="naQ-RK-cWO"/>
+                        <outlet property="welcomeTextLabel" destination="lMd-U9-GRV" id="jJV-9W-2zc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Loading Screen Background" width="375" height="667"/>
+        <image name="icon" width="290" height="128"/>
+    </resources>
 </document>
