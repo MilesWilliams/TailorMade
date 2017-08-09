@@ -9,6 +9,14 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Raleway-Regular.ttf">
+            <string>Raleway-Regular</string>
+        </array>
+        <array key="Raleway-Thin.ttf">
+            <string>Raleway-Thin</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -52,23 +60,53 @@
                                     <constraint firstAttribute="width" constant="97" id="NDx-NS-Ay7"/>
                                 </constraints>
                                 <color key="textColor" red="0.69803921568627447" green="0.59607843137254901" blue="0.36470588235294116" alpha="0.5" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Raleway-Thin" family="Raleway" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PuA-Og-m0l">
+                                <rect key="frame" x="193" y="516" width="111" height="31"/>
+                                <color key="backgroundColor" red="0.69803921570000005" green="0.59607843140000005" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="111" id="cw2-fe-fiv"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="111" id="f6I-9v-J5S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="16"/>
+                                <state key="normal" title="LOGIN">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kO6-bb-Nmi">
+                                <rect key="frame" x="72" y="516" width="111" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="111" id="Q17-kc-qgs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Raleway-Thin" family="Raleway" pointSize="16"/>
+                                <state key="normal" title="SIGN UP">
+                                    <color key="titleColor" red="0.69803921570000005" green="0.59607843140000005" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="lMd-U9-GRV" firstAttribute="top" secondItem="F9k-v3-dZ0" secondAttribute="bottom" constant="-147" id="5vE-2S-xch"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PuA-Og-m0l" secondAttribute="trailing" constant="55" id="7BL-bV-bVC"/>
+                            <constraint firstItem="PuA-Og-m0l" firstAttribute="top" secondItem="iwc-Fr-O1z" secondAttribute="bottom" constant="144" id="9qv-bo-Izu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lMd-U9-GRV" secondAttribute="trailing" constant="123" id="CoY-NU-OIC"/>
+                            <constraint firstItem="kO6-bb-Nmi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="56" id="DAf-Kp-79R"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iwc-Fr-O1z" secondAttribute="bottom" constant="295" id="Hbk-yS-UxI"/>
                             <constraint firstItem="iwc-Fr-O1z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="Kwg-jt-8Kz"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lMd-U9-GRV" secondAttribute="bottom" constant="123" id="LX3-So-0iz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kO6-bb-Nmi" secondAttribute="bottom" constant="120" id="NZM-GN-Qrr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PuA-Og-m0l" secondAttribute="bottom" constant="120" id="PtZ-xb-evx"/>
                             <constraint firstItem="lMd-U9-GRV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="123" id="QR3-Bm-gmp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lMd-U9-GRV" secondAttribute="trailing" constant="123" id="SKi-DU-f3b"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iwc-Fr-O1z" secondAttribute="trailing" constant="27" id="W4x-f0-gM4"/>
                             <constraint firstItem="iwc-Fr-O1z" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="212" id="bcg-8d-sEN"/>
+                            <constraint firstItem="kO6-bb-Nmi" firstAttribute="top" secondItem="iwc-Fr-O1z" secondAttribute="bottom" constant="144" id="e8w-ts-i6K"/>
+                            <constraint firstItem="PuA-Og-m0l" firstAttribute="leading" secondItem="kO6-bb-Nmi" secondAttribute="trailing" constant="10" id="gBB-ZD-oD5"/>
                             <constraint firstItem="F9k-v3-dZ0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="hag-aU-sii"/>
                             <constraint firstItem="lMd-U9-GRV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="123" id="qiU-PJ-MdP"/>
+                            <constraint firstItem="PuA-Og-m0l" firstAttribute="leading" secondItem="kO6-bb-Nmi" secondAttribute="trailing" constant="10" id="sip-WI-PdP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="F9k-v3-dZ0" secondAttribute="trailing" constant="-16" id="uxT-Lg-UhL"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -79,6 +117,8 @@
                     </view>
                     <connections>
                         <outlet property="background" destination="3hO-5r-8Wb" id="naQ-RK-cWO"/>
+                        <outlet property="loginBTN" destination="PuA-Og-m0l" id="6O1-jq-fF6"/>
+                        <outlet property="signupBTN" destination="kO6-bb-Nmi" id="KpG-Hu-2TJ"/>
                         <outlet property="welcomeTextLabel" destination="lMd-U9-GRV" id="jJV-9W-2zc"/>
                     </connections>
                 </viewController>
